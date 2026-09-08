@@ -1,0 +1,37 @@
+Program 1: Linear Search
+def linear_search(arr, key):
+ for i in range(len(arr)):
+ if arr[i] == key:
+ return i
+ return -1
+arr = [10, 25, 30, 45, 60]
+key = 30
+result = linear_search(arr, key)
+if result != -1:
+ print("Element found at index:", result)
+else:
+JAIDEV EDUCATION SOCIETY’S
+J D COLLEGE OF ENGINEERING AND MANAGEMENT
+KATOL ROAD, NAGPUR
+Website: www.jdcoem.ac.in E-mail: info@jdcoem.ac.in
+(An Autonomous Institute, with NAAC "A" Grade)
+Affiliated to DBATU, RTMNU & MSBTE Mumbai
+Department of Artificial Intelligence
+“A Place to Learn, A Chance to Grow”
+Session: 2026-27 print("Element not found")
+🧪 Program 2: Binary Search
+def binary_search(arr, key):
+ low = 0
+ high = len(arr) - 1
+ while low <= high:
+ mid = (low + high) // 2
+ if arr[mid] == key:
+ return mid
+ elif arr[mid] < key:
+ low = mid + 1
+ else:
+ high = mid - 1
+ return -1
+arr = [10, 20, 30, 40, 50]
+key = 40
+print("Index:", binary_search(arr, key))
